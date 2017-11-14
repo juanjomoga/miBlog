@@ -1,2 +1,16 @@
+<% provide(:titulo,'Contacto') %> 
 <h1>Estaticas#contacto</h1>
 <p>Find me in app/views/estaticas/contacto.html.erb</p>
+<%= @mensaje %>
+<br>
+<%= "El controller dice: #{@mensaje}" %>
+
+<ul>
+<% @usuarios.each do |i| %>
+<%= "<li> #{i} </li>".html_safe %>
+<% end %>	
+</ul>
+
+<%= link_to "Home", root_path %>
+<%= link_to "Nosotros", estaticas_nosotros_path %>
+<%= link_to "Contacto", estaticas_contacto_path %>
